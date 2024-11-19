@@ -58,8 +58,8 @@ const Data = () => {
       </h1>
       <h3 className="home__subtitle">Software Developer</h3>
       <p className="home__description">
-        I'm a creative developer based in Ontario, and I'm very passionate and
-        dedicated to my work.
+        Passionate 👨‍💻 software geek turning ideas into innovation—coding isn’t
+        just work; it’s my craft.
       </p>
 
       <a href="#contact" className="button button--flex">

@@ -22,12 +22,13 @@ const About = () => {
           <Info />
 
           <p className="about__description">
-            Results-driven front-end developer with over two years of experience
-            building responsive and optimized web appli- cations. Expertise in
-            modern UI/UX principles, responsive design, and web performance
-            optimization using React and related tools. Committed to leveraging
-            best practices in CI/CD, Agile, and cloud integration for scalable,
-            high-performance applications.
+            As a React and Redux specialist at HCLTech, I drive user experience
+            improvements and optimize application performance. With a background
+            in web design from Conestoga College and an engineering degree in
+            IT, I excel in integrating RESTful APIs and GraphQL. My focus is on
+            solving complex problems and innovating within the tech landscape,
+            as demonstrated in successful projects like a financial industry's
+            tech migration.
           </p>
 
           <a download="" href={CV} className="button button--flex">
