@@ -9,9 +9,20 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-      emailjs.sendForm("service_dyo6led", "template_3iv5y3l", form.current, {
-          publicKey: "tsBnrYgs7KU7KNgA8",
-      });
+        emailjs
+            .sendForm("service_ocmmdc8", "template_tpflc1x", form.current, {
+                publicKey: "yG5lhYeQrk0ju3JAe",
+            })
+            .then(
+                (response) => {
+                    console.log("Email sent successfully!", response);
+                    alert("Email sent successfully!");
+                },
+                (error) => {
+                    console.error("Error sending email:", error);
+                    alert("Failed to send email. Please try again.");
+                }
+            );
       e.target.reset();
   };
 
@@ -122,7 +133,7 @@ const Contact = () => {
               </div>
           </div>
     </section>
-    );
+  );
 };
 
 export default Contact;
