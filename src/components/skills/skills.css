@@ -49,7 +49,12 @@
   .bxl-java
   .bxl-gitlab
   .bxl-visual-studio
-  .bxl-github {
+  .bxl-github
+  .bxl-typescript
+  .bxl-graphql
+  .bxl-tailwind-css
+  .bxl-redux
+  .bxl-spring-boot {
   font-size: 1rem;
   color: var(--title-color);
 }

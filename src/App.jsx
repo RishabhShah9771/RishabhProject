@@ -23,7 +23,6 @@ function App() {
         <Work />
         <Contact />
       </main>
-
       <Footer />
       <ScrollUp />
     </>
