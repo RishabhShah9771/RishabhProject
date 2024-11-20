@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import "./about.css";
-import CV from "../../assets/Shah__Rishabh_Developer_Resume.pdf";
+import CV from "../../assets/Shah_Rishabh_Developer_Resume.pdf";
 
 import Info from "./Info";
 
