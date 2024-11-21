@@ -17,7 +17,7 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    ReactGA.initialize("G-WEE56Q9YV4");
+    ReactGA.initialize("G - WEE56Q9YV4");
   }, []);
 
   useEffect(() => {
