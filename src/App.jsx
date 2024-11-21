@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "../src/components/header/Header";
-import Home from "../src/components//home/Home";
+import Home from "../src/components/home/Home";
 import About from "../src/components/about/About";
 import Skills from "../src/components/skills/Skills";
 import Experience from "../src/components/experience/Experience";
@@ -17,10 +17,12 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    ReactGA.initialize("G - WEE56Q9YV4");
+    // Initialize Google Analytics
+    ReactGA.initialize("G-WEE56Q9YV4");
   }, []);
 
   useEffect(() => {
+    // Send pageview for each route change
     ReactGA.send({ hitType: "pageview", page: location.pathname });
   }, [location]);
 
