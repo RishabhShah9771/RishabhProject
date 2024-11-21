@@ -2,6 +2,7 @@
 import React from "react";
 import "./about.css";
 import CV from "../../assets/Shah_Rishabh_Developer_Resume.pdf";
+import Profileimage from "../../src/assets/RishabhProfilePicture.jpg";
 
 import Info from "./Info";
 
@@ -12,11 +13,7 @@ const About = () => {
       <span className="section__subtitle">Professional Snapshot</span>
 
       <div className="about__container container grid">
-        <img
-          src="../../src/assets/RishabhProfilePicture.jpg"
-          alt=""
-          className="about__img"
-        />
+        <img src={Profileimage} alt="" className="about__img" />
 
         <div className="about__data">
           <Info />
