@@ -9,8 +9,21 @@ import Work from "../src/components/work/Work";
 import Contact from "../src/components/contact/Contact";
 import Footer from "../src/components/footer/Footer";
 import ScrollUp from "../src/components/scrollup/ScrollUp";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import ReactGA from "react-ga4";
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.initialize("G-WEE56Q9YV4");
+  }, []);
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+
   return (
     <>
       <Header />
