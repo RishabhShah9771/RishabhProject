@@ -22,7 +22,7 @@ const About = () => {
           <Info />
 
           <p className="about__description">
-            AAs a React and Redux specialist at HCLTech, I drive user experience
+            As a React and Redux specialist at HCLTech, I drive user experience
             improvements and optimize application performance. With a background
             in web design from Conestoga College and an engineering degree in
             IT, I excel in integrating RESTful APIs and GraphQL. My focus is on
