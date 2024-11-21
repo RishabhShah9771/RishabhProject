@@ -2,7 +2,7 @@
 import React from "react";
 import "./about.css";
 import CV from "../../assets/Shah_Rishabh_Developer_Resume.pdf";
-import Profileimage from "../../src/assets/RishabhProfilePicture.jpg";
+import Profileimage from "../../assets/RishabhProfilePicture.jpg";
 
 import Info from "./Info";
 
