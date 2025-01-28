@@ -42,54 +42,69 @@ const Experience = () => {
                 onClick={() => toggleTab(0)}
                 className="uil uil-times exp__modal-close"
               ></i>
-
               <h3 className="exp__modal-title">
                 Software Developer <br /> Sep'22 - Currently Working🧑🏻‍💻
               </h3>
               <p className="exp__modal-description">
                 Exposition of Contributions
               </p>
-
               <ul className="exp__modal-experiences grid">
                 <li className="exp__modal-experience">
                   <li className="uil uil-check-circle exp__modal-icon"></li>
                   <p className="exp__modal-info">
-                    Developed and maintained scalable React applications,
-                    improving load times by 99% using ReactJS and React- Native.
+                    Engineered highly scalable and performance driven React
+                    applications, achieving a 99% improvement in load times
+                    through advanced optimization techniques with ReactJS and
+                    React Native.
                   </p>
                 </li>
 
                 <li className="exp__modal-experience">
                   <li className="uil uil-check-circle exp__modal-icon"></li>
                   <p className="exp__modal-info">
-                    Integrated third-party APIs, managing asynchronous data
-                    fetching and error handling effectively.
+                    Played a pivotal role in migrating a mission-critical
+                    website for a leading financial industry client,
+                    transitioning from a legacy technology stack to a modern,
+                    robust architecture.
                   </p>
                 </li>
 
                 <li className="exp__modal-experience">
                   <li className="uil uil-check-circle exp__modal-icon"></li>
                   <p className="exp__modal-info">
-                    Integrated RESTful APIs and GraphQL for dynamic data
-                    fetching and management.
+                    Seamlessly integrated third-party APIs, leveraging advanced
+                    asynchronous programming techniques to ensure smooth data
+                    fetching and robust error handling, enhancing application
+                    reliability.
                   </p>
                 </li>
 
                 <li className="exp__modal-experience">
                   <li className="uil uil-check-circle exp__modal-icon"></li>
                   <p className="exp__modal-info">
-                    Utilized Redux/Context API for centralized state management,
-                    optimizing data flow and enhancing appli- cation
-                    performance.
+                    Implemented dynamic data management by integrating RESTful
+                    APIs and GraphQL, resulting in streamlined data operations
+                    and real-time updates across complex application workflows.
                   </p>
                 </li>
 
                 <li className="exp__modal-experience">
                   <li className="uil uil-check-circle exp__modal-icon"></li>
                   <p className="exp__modal-info">
-                    Implemented CRUD functionality using React hooks and state
-                    management (e.g., useState, useContext) to efficiently
-                    manage data throughout the application.
+                    Designed and deployed centralized state management systems
+                    using Redux and Context API, achieving optimized data flow,
+                    enhanced application scalability, and improved user
+                    experience.
+                  </p>
+                </li>
+
+                <li className="exp__modal-experience">
+                  <li className="uil uil-check-circle exp__modal-icon"></li>
+                  <p className="exp__modal-info">
+                    Developed and optimized CRUD functionality utilizing React
+                    hooks (e.g., useState, useEffect, and useContext), ensuring
+                    seamless data operations while maintaining high code quality
+                    and maintainability.
                   </p>
                 </li>
               </ul>
