@@ -24,12 +24,12 @@ const About = () => {
             in web design from Conestoga College and an engineering degree in
             IT, I excel in integrating RESTful APIs and GraphQL. My focus is on
             solving complex problems and innovating within the tech landscape,
-            as demonstrated in successful projects like a financial industry's
-            tech migration.
+            as demonstrated in successful projects like a financial
+            industry&apos;s tech migration.
           </p>
 
           <a download="" href={CV} className="button button--flex">
-            Download CV
+            Download Resume
             <svg
               className="button__icon"
               xmlns="http://www.w3.org/2000/svg"
