@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     // Initialize Google Analytics
     ReactGA.initialize("G-WEE56Q9YV4");
-  }, []);
+  }, [location.pathname]);
 
   useEffect(() => {
     // Send pageview for each route change

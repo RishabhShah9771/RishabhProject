@@ -19,13 +19,26 @@ const About = () => {
           <Info />
 
           <p className="about__description">
-            As a React and Redux specialist at HCLTech, I drive user experience
-            improvements and optimize application performance. With a background
-            in web design from Conestoga College and an engineering degree in
-            IT, I excel in integrating RESTful APIs and GraphQL. My focus is on
-            solving complex problems and innovating within the tech landscape,
-            as demonstrated in successful projects like a financial
-            industry&apos;s tech migration.
+            I’m a Software Engineer with 3+ years of experience crafting
+            scalable, high-performance web applications in fast-paced Agile
+            environments. At HCLTech, I specialize in building seamless,
+            intuitive user experiences using{" "}
+            <strong>React, Redux, and TypeScript</strong>, with a strong
+            emphasis on performance optimization—recently cutting page load
+            times by <strong>99%</strong> through strategic code splitting and
+            bundle tuning. With a Postgraduate in{" "}
+            <strong>Web Design and Development</strong> from Conestoga College
+            and a{" "}
+            <strong>Bachelor’s of Engineering in Information Technology</strong>
+            , I bring both creative and technical depth to the table. My work
+            spans across fintech, e-commerce, and enterprise solutions, where
+            I’ve led <strong>API integrations (RESTful & GraphQL)</strong>,
+            migrated large-scale legacy systems to modern architectures, and
+            collaborated cross-functionally to deliver polished,
+            production-ready features. Whether it’s transforming legacy
+            infrastructure or driving UI consistency at scale, I thrive on
+            solving complex challenges and delivering impact-driven solutions
+            that are user-centric and future-ready.
           </p>
 
           <a download="" href={CV} className="button button--flex">

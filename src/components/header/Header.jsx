@@ -1,13 +1,40 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import "./Header.css";
 
 const Header = () => {
-  window.addEventListener("scroll", function () {
-    const header = this.document.querySelector(".header");
-    if (this.scrollY >= 80) header.classList.add("scroll-header");
-    else header.classList.remove("scroll-header");
-  });
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const header = document.querySelector(".header");
+      if (window.scrollY >= 80) {
+        header.classList.add("scroll-header");
+      } else {
+        header.classList.remove("scroll-header");
+      }
+
+      const sections = document.querySelectorAll("section[id]");
+      if (!sections.length) {
+        console.warn(
+          "No sections with id found. Ensure all sections have proper id attributes."
+        );
+      }
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 50;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute("id");
+
+        if (
+          window.scrollY > sectionTop &&
+          window.scrollY <= sectionTop + sectionHeight
+        ) {
+          setActiveNav(`#${sectionId}`);
+          console.log(sectionId);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const [Toggle, showMenu] = useState(false);
   const [activeNav, setActiveNav] = useState("#home");
@@ -83,7 +110,7 @@ const Header = () => {
                     : "nav__link"
                 }
               >
-                <i className="uil uil-scenery nav__icon"></i> Portfolio
+                <i className="uil uil-scenery nav__icon"></i> Projects
               </a>
             </li>
 

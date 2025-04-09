@@ -58,8 +58,8 @@ const Data = () => {
       </h1>
       <h3 className="home__subtitle">Software Developer</h3>
       <p className="home__description">
-        Passionate 👨‍💻 software geek turning ideas into innovation—coding isn’t
-        just work; it’s my craft.
+        ⚡ Fueled by curiosity, driven by code—creating innovative solutions that
+        make life easier 📱.
       </p>
 
       <a href="#contact" className="button button--flex">
