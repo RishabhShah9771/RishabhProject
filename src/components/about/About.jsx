@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
+import { useState, useEffect, useRef } from "react";
 import "./about.css";
 import CV from "../../assets/Shah_Rishabh_Developer_Resume.pdf";
 import Profileimage from "../../assets/RishabhProfilePicture.jpg";
@@ -7,17 +6,73 @@ import Profileimage from "../../assets/RishabhProfilePicture.jpg";
 import Info from "./Info";
 
 const About = () => {
+  // State to track if the profile image has been loaded
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  // State to track if the profile image is visible in the viewport
+  const [isImageVisible, setIsImageVisible] = useState(false);
+
+  // Ref to reference the image container for intersection observer
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    // Intersection Observer to detect when the image container is in the viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsImageVisible(true); // Set image visibility to true when in viewport
+          observer.disconnect(); // Disconnect observer after the image is visible
+        }
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of the element is visible
+        root: null, // Use the viewport as the root
+      }
+    );
+
+    const currentImageRef = imageRef.current;
+    if (currentImageRef) {
+      observer.observe(currentImageRef); // Start observing the image container
+    }
+
+    // Cleanup function to unobserve the image container
+    return () => {
+      if (currentImageRef && observer) {
+        observer.unobserve(currentImageRef);
+      }
+    };
+  }, []);
+
+  // Handler for when the image has finished loading
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+
   return (
     <section className="about section" id="about">
+      {/* Section title */}
       <h2 className="section__title">About Me</h2>
       <span className="section__subtitle">Professional Snapshot</span>
 
       <div className="about__container container grid">
-        <img src={Profileimage} alt="" className="about__img" />
+        {/* Image container with lazy loading */}
+        <div ref={imageRef} className="about__img-container">
+          {isImageVisible && (
+            <img
+              src={Profileimage}
+              alt="Profile"
+              className={`about__img ${isImageLoaded ? "loaded" : "loading"}`}
+              onLoad={handleImageLoad} // Trigger when the image is loaded
+            />
+          )}
+        </div>
 
         <div className="about__data">
+          {/* Component to display additional information */}
           <Info />
 
+          {/* Description about the user */}
           <p className="about__description">
             I’m a Software Engineer with 3+ years of experience crafting
             scalable, high-performance web applications in fast-paced Agile
@@ -41,6 +96,7 @@ const About = () => {
             that are user-centric and future-ready.
           </p>
 
+          {/* Button to download the resume */}
           <a download="" href={CV} className="button button--flex">
             Download Resume
             <svg

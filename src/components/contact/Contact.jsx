@@ -3,24 +3,30 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
 
+// Contact component
 const Contact = () => {
+    // Reference to the form element
     const form = useRef();
 
+    // Function to handle email sending
     const sendEmail = (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevent default form submission behavior
 
+        // Extract and trim form input values
       const name = e.target.name.value.trim();
       const email = e.target.email.value.trim();
       const message = e.target.message.value.trim();
 
+        // Validate form fields
       if (!name || !email || !message) {
           alert("Please fill in all the fields before submitting...");
           return;
       }
 
+        // Use emailjs to send the form data
       emailjs
           .sendForm("service_ocmmdc8", "template_tpflc1x", form.current, {
-              publicKey: "yG5lhYeQrk0ju3JAe",
+              publicKey: "yG5lhYeQrk0ju3JAe", // Public key for emailjs
           })
           .then(
               (response) => {
@@ -32,29 +38,32 @@ const Contact = () => {
                   alert("Failed to send email. Please try again.");
               }
           );
+
+        // Reset the form after submission
       e.target.reset();
   };
 
   return (
     <section className="contact section" id="contact">
+          {/* Section title */}
           <h2 className="section__title">Get In Touch 📩</h2>
           <span className="section__subtitle"></span>
 
           <div className="contact__container container grid">
+              {/* Contact information section */}
               <div className="contact__content">
                   <h3 className="contact__title">
                       Let’s Connect<i className="uil uil-calling"></i>
                   </h3>
 
                   <div className="contact__info">
+                      {/* Email card */}
                       <div className="contact__card">
                           <i className="bx bx-mail-send contact__card-icon"></i>
-
                           <h3 className="contact__card-title">Email</h3>
                           <span className="contact__card-data">
                               rishabh.shah3197@gmail.com
                           </span>
-
                           <a
                               href="mailto:rishabh.shah3197@gmail.com"
                               className="contact__button"
@@ -64,12 +73,11 @@ const Contact = () => {
                           </a>
                       </div>
 
+                      {/* WhatsApp card */}
                       <div className="contact__card">
                           <i className="bx bxl-whatsapp contact__card-icon"></i>
-
                           <h3 className="contact__card-title">WhatsApp</h3>
                           <span className="contact__card-data">(+1) 2269785529</span>
-
                           <a
                               href="https://api.whatsapp.com/send?phone=2269785529&text=Hello, I would like to connect with you!"
                               className="contact__button"
@@ -81,12 +89,15 @@ const Contact = () => {
                   </div>
               </div>
 
+              {/* Contact form section */}
               <div className="contact__content">
                   <h3 className="contact__title">
                       Drop Me a Line<i className="uil uil-message"></i>
                   </h3>
 
+                  {/* Form for sending messages */}
                   <form ref={form} onSubmit={sendEmail} className="contact__form">
+                      {/* Name input field */}
                       <div className="contact__form-div">
                           <label className="contact__form-tag">Name</label>
                           <input
@@ -97,6 +108,7 @@ const Contact = () => {
                           />
                       </div>
 
+                      {/* Email input field */}
                       <div className="contact__form-div">
                           <label className="contact__form-tag">Mail</label>
                           <input
@@ -107,6 +119,7 @@ const Contact = () => {
                           />
                       </div>
 
+                      {/* Message textarea */}
                       <div className="contact__form-div contact__form-area">
                           <label className="contact__form-tag">Message</label>
                           <textarea
@@ -118,6 +131,7 @@ const Contact = () => {
                           ></textarea>
                       </div>
 
+                      {/* Submit button */}
                       <button className="button button--flex">
                           Send Message
                           <svg

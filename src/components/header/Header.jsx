@@ -2,23 +2,29 @@ import React, { useState } from "react";
 import "./Header.css";
 
 const Header = () => {
+  // Effect to handle scroll events for adding/removing classes and updating active navigation link
   React.useEffect(() => {
     const handleScroll = () => {
       const header = document.querySelector(".header");
+
+      // Add or remove "scroll-header" class based on scroll position
       if (window.scrollY >= 80) {
         header.classList.add("scroll-header");
       } else {
         header.classList.remove("scroll-header");
       }
 
+      // Get all sections with an id attribute
       const sections = document.querySelectorAll("section[id]");
       if (!sections.length) {
         console.warn(
           "No sections with id found. Ensure all sections have proper id attributes."
         );
       }
+
+      // Update active navigation link based on the current scroll position
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 50;
+        const sectionTop = section.offsetTop - 50; // Adjust for offset
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute("id");
 
@@ -27,27 +33,35 @@ const Header = () => {
           window.scrollY <= sectionTop + sectionHeight
         ) {
           setActiveNav(`#${sectionId}`);
-          console.log(sectionId);
         }
       });
     };
 
+    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
+
+    // Cleanup scroll event listener on component unmount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // State to toggle the mobile menu
   const [Toggle, showMenu] = useState(false);
+
+  // State to track the currently active navigation link
   const [activeNav, setActiveNav] = useState("#home");
 
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="index.html " className="nav__logo">
+        {/* Logo */}
+        <a href="index.html" className="nav__logo">
           &lt;Rishabh Shah/&gt;
         </a>
 
+        {/* Navigation menu */}
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
+            {/* Navigation items */}
             <li className="nav__item">
               <a
                 href="#home"
@@ -129,12 +143,14 @@ const Header = () => {
             </li>
           </ul>
 
+          {/* Close button for mobile menu */}
           <i
             className="uil uil-times nav__close"
             onClick={() => showMenu(!Toggle)}
           ></i>
         </div>
 
+        {/* Toggle button for mobile menu */}
         <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
           <i className="uil uil-apps"></i>
         </div>
