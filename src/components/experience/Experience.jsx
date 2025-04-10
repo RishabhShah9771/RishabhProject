@@ -52,49 +52,50 @@ const Experience = () => {
                 <li className="exp__modal-experience">
                   <li className="uil uil-check-circle exp__modal-icon"></li>
                   <p className="exp__modal-info">
-                    Engineered highly scalable and performance driven React
-                    applications, achieving a 99% improvement in load times
-                    through advanced optimization techniques with ReactJS and
-                    React Native.
+                    Delivered <strong>high-performance front-end apps</strong>{" "}
+                    with <strong>React</strong> and <strong>Typescript</strong>,
+                    reducing <strong>page load time by 99 %</strong> through
+                    code splitting and bundle optimization.
                   </p>
                 </li>
 
                 <li className="exp__modal-experience">
                   <li className="uil uil-check-circle exp__modal-icon"></li>
                   <p className="exp__modal-info">
-                    Played a pivotal role in migrating a mission-critical
-                    website for a leading financial industry client,
-                    transitioning from a legacy technology stack to a modern,
-                    robust architecture.
+                    Integrated <strong>RESTful</strong> and{" "}
+                    <strong>GraphQL</strong> APIs into React-based applications
+                    for a <strong>leading global finance client</strong>,
+                    ensuring <strong>real-time data rendering</strong> and{" "}
+                    <strong>error resiliency</strong>.
                   </p>
                 </li>
 
                 <li className="exp__modal-experience">
                   <li className="uil uil-check-circle exp__modal-icon"></li>
                   <p className="exp__modal-info">
-                    Seamlessly integrated third-party APIs, leveraging advanced
-                    asynchronous programming techniques to ensure smooth data
-                    fetching and robust error handling, enhancing application
-                    reliability.
+                    Migrated <strong>large-scale legacy systems</strong> to a
+                    <strong>modern component-based architecture</strong> using
+                    <strong>Redux</strong> and <strong>Context API</strong>,
+                    improving maintainability and scalability.
                   </p>
                 </li>
 
                 <li className="exp__modal-experience">
                   <li className="uil uil-check-circle exp__modal-icon"></li>
                   <p className="exp__modal-info">
-                    Implemented dynamic data management by integrating RESTful
-                    APIs and GraphQL, resulting in streamlined data operations
-                    and real-time updates across complex application workflows.
+                    Built <strong>reusable UI components</strong> and enforced
+                    <strong>design consistency</strong> across multiple product
+                    features and development teams.
                   </p>
                 </li>
 
                 <li className="exp__modal-experience">
                   <li className="uil uil-check-circle exp__modal-icon"></li>
                   <p className="exp__modal-info">
-                    Designed and deployed centralized state management systems
-                    using Redux and Context API, achieving optimized data flow,
-                    enhanced application scalability, and improved user
-                    experience.
+                    Collaborated with{" "}
+                    <strong>product managers, QA, and design teams</strong> in
+                    <strong>Agile sprints</strong>, delivering features on time
+                    with high test coverage.
                   </p>
                 </li>
 
@@ -102,9 +103,10 @@ const Experience = () => {
                   <li className="uil uil-check-circle exp__modal-icon"></li>
                   <p className="exp__modal-info">
                     Developed and optimized CRUD functionality utilizing React
-                    hooks (e.g., useState, useEffect, and useContext), ensuring
-                    seamless data operations while maintaining high code quality
-                    and maintainability.
+                    hooks{" "}
+                    <strong>(e.g., useState, useEffect, and useContext)</strong>
+                    , ensuring seamless data operations while maintaining high
+                    code quality and maintainability.
                   </p>
                 </li>
               </ul>
@@ -150,28 +152,31 @@ const Experience = () => {
                 <li className="exp__modal-experience">
                   <li className="uil uil-check-circle exp__modal-icon"></li>
                   <p className="exp__modal-info">
-                    Developed and maintained scalable web applications using
-                    React for the front end and Java (Spring Boot) for the back
-                    end, enhancing functionality and user engagement for
-                    high-traffic platforms.
+                    Built scalable web applications using{" "}
+                    <strong>React (front end)</strong> and{" "}
+                    <strong>Java with Spring Boot (back end)</strong>, enhancing
+                    functionality and engagement on high-traffic platforms.
                   </p>
                 </li>
 
                 <li className="exp__modal-experience">
                   <li className="uil uil-check-circle exp__modal-icon"></li>
                   <p className="exp__modal-info">
-                    Designed and implemented responsive user interfaces with
-                    React, Redux for state management, and inte- grated with
-                    RESTful APIs developed using Spring Boot.
+                    Designed responsive interfaces with <strong>React</strong>{" "}
+                    and <strong>Redux</strong>, integrating seamlessly with{" "}
+                    <strong>RESTful APIs</strong> for dynamic data handling and
+                    efficient workflows.
                   </p>
                 </li>
 
                 <li className="exp__modal-experience">
                   <li className="uil uil-check-circle exp__modal-icon"></li>
                   <p className="exp__modal-info">
-                    Built RESTful web services and micro-services in Java to
-                    handle complex business logic and data process- ing,
-                    utilizing Spring Boot and Hibernate for ORM.
+                    Boosted performance by{" "}
+                    <strong>30 % through lazy loading</strong>, code splitting,
+                    and optimized data fetching; implemented{" "}
+                    <strong>CI/CD pipelines</strong> using{" "}
+                    <strong>Jenkins for 20% faster deployments</strong>.
                   </p>
                 </li>
 
@@ -188,17 +193,89 @@ const Experience = () => {
                 <li className="exp__modal-experience">
                   <li className="uil uil-check-circle exp__modal-icon"></li>
                   <p className="exp__modal-info">
-                    Implemented CI/CD pipelines using Jenkins & Docker, enabling
-                    automated testing, integration, and deploy- ment, reducing
-                    release cycle times by 20%.
+                    Managed and optimized <strong>MySQL</strong> &{" "}
+                    <strong>PostgreSQL</strong> database, focusing on schema
+                    design, query efficiency, and scalable data migrations.
                   </p>
                 </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="exp__content">
+          <div>
+            {/* Need to change Icon */}
+            <i className="uil uil-laptop exp__icon"></i>
+            <h3 className="exp__title">
+              Freelance <br /> Frontend Developer
+            </h3>
+          </div>
+
+          <div>
+            <span className="exp__comp">Remote</span>
+          </div>
+
+          <span className="exp__button" onClick={() => toggleTab(3)}>
+            View More <i className="uil uil-arrow-right exp__button-icon"></i>
+          </span>
+
+          <div
+            className={
+              toggleState === 3 ? "exp__modal active-modal" : "exp__modal"
+            }
+          >
+            <div className="exp__modal-content">
+              <i
+                onClick={() => toggleTab(0)}
+                className="uil uil-times exp__modal-close"
+              ></i>
+
+              <h3 className="exp__modal-title">
+                Freelance Frontend Developer <br /> Jan'20 - Present
+              </h3>
+              <p className="exp__modal-description">
+                Exposition of Contributions
+              </p>
+
+              <ul className="exp__modal-experiences grid">
                 <li className="exp__modal-experience">
-                  <li className="uil uil-check-circle exp__modal-icon"></li>
+                  <i className="uil uil-check-circle exp__modal-icon"></i>
                   <p className="exp__modal-info">
-                    Managed databases using MySQL & PostgreSQL, including schema
-                    design, query optimization, and data migration to support
-                    application scalability.
+                    Built responsive and fully functional{" "}
+                    <strong>React applications</strong> for small businesses and
+                    personal branding use cases, including dynamic portfolios
+                    and dashboards.
+                  </p>
+                </li>
+
+                <li className="exp__modal-experience">
+                  <i className="uil uil-check-circle exp__modal-icon"></i>
+                  <p className="exp__modal-info">
+                    Developed and deployed{" "}
+                    <strong>`PortfolioMaster-byRishabh`</strong>, showcasing
+                    projects with smooth UI/UX, routing, and animations using
+                    React, <strong>Tailwind CSS</strong> and{" "}
+                    <strong>Framer Motion</strong>.
+                  </p>
+                </li>
+
+                <li className="exp__modal-experience">
+                  <i className="uil uil-check-circle exp__modal-icon"></i>
+                  <p className="exp__modal-info">
+                    Created e-commerce templates and admin dashboards using{" "}
+                    <strong>Redux</strong>, responsive layouts, and
+                    component-based architecture, tailored for client
+                    prototyping needs.
+                  </p>
+                </li>
+
+                <li className="exp__modal-experience">
+                  <i className="uil uil-check-circle exp__modal-icon"></i>
+                  <p className="exp__modal-info">
+                    Translated client requirements into scoped React solutions,
+                    integrating routing, reusable UI components, and{" "}
+                    <strong>API endpoints</strong> with seamless functionality.
                   </p>
                 </li>
               </ul>
