@@ -205,7 +205,7 @@ const Experience = () => {
 
         <div className="exp__content">
           <div>
-            <i className="uil uil-arrow exp__icon"></i>
+            <i className="uil uil-web-grid exp__icon"></i>
             <h3 className="exp__title">
               Software <br /> Developer
             </h3>
