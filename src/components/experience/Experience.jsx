@@ -203,83 +203,81 @@ const Experience = () => {
           </div>
         </div>
 
-        <div className="exp__content">
-          <div>
-            {/* Need to change Icon */}
-            <i className="uil uil-laptop exp__icon"></i>
-            <h3 className="exp__title">
-              Freelance <br /> Frontend Developer
+        <div>
+          {/* Need to change Icon */}
+          <i className="uil uil-laptop exp__icon"></i>
+          <h3 className="exp__title">
+            Freelance <br /> Frontend Developer
+          </h3>
+        </div>
+
+        <div>
+          <span className="exp__comp">Remote</span>
+        </div>
+
+        <span className="exp__button" onClick={() => toggleTab(3)}>
+          View More <i className="uil uil-arrow-right exp__button-icon"></i>
+        </span>
+
+        <div
+          className={
+            toggleState === 3 ? "exp__modal active-modal" : "exp__modal"
+          }
+        >
+          <div className="exp__modal-content">
+            <i
+              onClick={() => toggleTab(0)}
+              className="uil uil-times exp__modal-close"
+            ></i>
+
+            <h3 className="exp__modal-title">
+              Freelance Frontend Developer <br /> Jan'20 - Present
             </h3>
-          </div>
+            <p className="exp__modal-description">
+              Exposition of Contributions
+            </p>
 
-          <div>
-            <span className="exp__comp">Remote</span>
-          </div>
+            <ul className="exp__modal-experiences grid">
+              <li className="exp__modal-experience">
+                <i className="uil uil-check-circle exp__modal-icon"></i>
+                <p className="exp__modal-info">
+                  Built responsive and fully functional{" "}
+                  <strong>React applications</strong> for small businesses and
+                  personal branding use cases, including dynamic portfolios and
+                  dashboards.
+                </p>
+              </li>
 
-          <span className="exp__button" onClick={() => toggleTab(3)}>
-            View More <i className="uil uil-arrow-right exp__button-icon"></i>
-          </span>
+              <li className="exp__modal-experience">
+                <i className="uil uil-check-circle exp__modal-icon"></i>
+                <p className="exp__modal-info">
+                  Developed and deployed{" "}
+                  <strong>`PortfolioMaster-byRishabh`</strong>, showcasing
+                  projects with smooth UI/UX, routing, and animations using
+                  React, <strong>Tailwind CSS</strong> and{" "}
+                  <strong>Framer Motion</strong>.
+                </p>
+              </li>
 
-          <div
-            className={
-              toggleState === 3 ? "exp__modal active-modal" : "exp__modal"
-            }
-          >
-            <div className="exp__modal-content">
-              <i
-                onClick={() => toggleTab(0)}
-                className="uil uil-times exp__modal-close"
-              ></i>
+              <li className="exp__modal-experience">
+                <i className="uil uil-check-circle exp__modal-icon"></i>
+                <p className="exp__modal-info">
+                  Created e-commerce templates and admin dashboards using{" "}
+                  <strong>Redux</strong>, responsive layouts, and
+                  component-based architecture, tailored for client prototyping
+                  needs.
+                </p>
+              </li>
 
-              <h3 className="exp__modal-title">
-                Freelance Frontend Developer <br /> Jan'20 - Present
-              </h3>
-              <p className="exp__modal-description">
-                Exposition of Contributions
-              </p>
-
-              <ul className="exp__modal-experiences grid">
-                <li className="exp__modal-experience">
-                  <i className="uil uil-check-circle exp__modal-icon"></i>
-                  <p className="exp__modal-info">
-                    Built responsive and fully functional{" "}
-                    <strong>React applications</strong> for small businesses and
-                    personal branding use cases, including dynamic portfolios
-                    and dashboards.
-                  </p>
-                </li>
-
-                <li className="exp__modal-experience">
-                  <i className="uil uil-check-circle exp__modal-icon"></i>
-                  <p className="exp__modal-info">
-                    Developed and deployed{" "}
-                    <strong>`PortfolioMaster-byRishabh`</strong>, showcasing
-                    projects with smooth UI/UX, routing, and animations using
-                    React, <strong>Tailwind CSS</strong> and{" "}
-                    <strong>Framer Motion</strong>.
-                  </p>
-                </li>
-
-                <li className="exp__modal-experience">
-                  <i className="uil uil-check-circle exp__modal-icon"></i>
-                  <p className="exp__modal-info">
-                    Created e-commerce templates and admin dashboards using{" "}
-                    <strong>Redux</strong>, responsive layouts, and
-                    component-based architecture, tailored for client
-                    prototyping needs.
-                  </p>
-                </li>
-
-                <li className="exp__modal-experience">
-                  <i className="uil uil-check-circle exp__modal-icon"></i>
-                  <p className="exp__modal-info">
-                    Translated client requirements into scoped React solutions,
-                    integrating routing, reusable UI components, and{" "}
-                    <strong>API endpoints</strong> with seamless functionality.
-                  </p>
-                </li>
-              </ul>
-            </div>
+              <li className="exp__modal-experience">
+                <i className="uil uil-check-circle exp__modal-icon"></i>
+                <p className="exp__modal-info">
+                  Translated client requirements into scoped React solutions,
+                  integrating routing, reusable UI components, and{" "}
+                  <strong>API endpoints</strong> with seamless functionality.
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
