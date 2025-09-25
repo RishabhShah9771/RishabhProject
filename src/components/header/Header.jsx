@@ -64,7 +64,10 @@ const Header = () => {
             {/* Navigation items */}
 
             <li className="nav__item">
-              <a href="https://personal-portfolio-2025-blue.vercel.app">
+              <a
+                href="https://personal-portfolio-2025-blue.vercel.app"
+                className="nav__link"
+              >
                 <i className="uil uil-estate nav__icon"></i> New Portfolio Link
               </a>
             </li>

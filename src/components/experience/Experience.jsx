@@ -202,6 +202,95 @@ const Experience = () => {
             </div>
           </div>
         </div>
+
+        <div className="exp__content">
+          <div>
+            <i className="uil uil-arrow exp__icon"></i>
+            <h3 className="exp__title">
+              Software <br /> Developer
+            </h3>
+          </div>
+
+          <div>
+            <span className="exp__comp">Webmyne Systems Pvt. Ltd.</span>
+          </div>
+
+          <span className="exp__button" onClick={() => toggleTab(2)}>
+            View More <i className="uil uil-arrow-right exp__button-icon"></i>
+          </span>
+
+          <div
+            className={
+              toggleState === 2 ? "exp__modal active-modal" : "exp__modal"
+            }
+          >
+            <div className="exp__modal-content">
+              <i
+                onClick={() => toggleTab(0)}
+                className="uil uil-times exp__modal-close"
+              ></i>
+
+              <h3 className="exp__modal-title">
+                Software Developer <br /> Jan'20 - Feb'21
+              </h3>
+              <p className="exp__modal-description">
+                Exposition of Contributions
+              </p>
+
+              <ul className="exp__modal-experiences grid">
+                <li className="exp__modal-experience">
+                  <li className="uil uil-check-circle exp__modal-icon"></li>
+                  <p className="exp__modal-info">
+                    Built scalable web applications using{" "}
+                    <strong>React (front end)</strong> and{" "}
+                    <strong>Java with Spring Boot (back end)</strong>, enhancing
+                    functionality and engagement on high-traffic platforms.
+                  </p>
+                </li>
+
+                <li className="exp__modal-experience">
+                  <li className="uil uil-check-circle exp__modal-icon"></li>
+                  <p className="exp__modal-info">
+                    Designed responsive interfaces with <strong>React</strong>{" "}
+                    and <strong>Redux</strong>, integrating seamlessly with{" "}
+                    <strong>RESTful APIs</strong> for dynamic data handling and
+                    efficient workflows.
+                  </p>
+                </li>
+
+                <li className="exp__modal-experience">
+                  <li className="uil uil-check-circle exp__modal-icon"></li>
+                  <p className="exp__modal-info">
+                    Boosted performance by{" "}
+                    <strong>30 % through lazy loading</strong>, code splitting,
+                    and optimized data fetching; implemented{" "}
+                    <strong>CI/CD pipelines</strong> using{" "}
+                    <strong>Jenkins for 20% faster deployments</strong>.
+                  </p>
+                </li>
+
+                <li className="exp__modal-experience">
+                  <li className="uil uil-check-circle exp__modal-icon"></li>
+                  <p className="exp__modal-info">
+                    Optimized application performance by employing techniques
+                    like lazy loading, code splitting, and efficient data
+                    fetching strategies, resulting in a 30% improvement in load
+                    times.
+                  </p>
+                </li>
+
+                <li className="exp__modal-experience">
+                  <li className="uil uil-check-circle exp__modal-icon"></li>
+                  <p className="exp__modal-info">
+                    Managed and optimized <strong>MySQL</strong> &{" "}
+                    <strong>PostgreSQL</strong> database, focusing on schema
+                    design, query efficiency, and scalable data migrations.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
