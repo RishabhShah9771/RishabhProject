@@ -62,6 +62,13 @@ const Header = () => {
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
             {/* Navigation items */}
+
+            <li className="nav__item">
+              <a href="https://personal-portfolio-2025-blue.vercel.app">
+                <i className="uil uil-estate nav__icon"></i> New Portfolio Link
+              </a>
+            </li>
+
             <li className="nav__item">
               <a
                 href="#home"
