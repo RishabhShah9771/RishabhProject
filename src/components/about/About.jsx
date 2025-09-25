@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./about.css";
-import CV from "../../assets/Shah_Rishabh_Developer_Resume.pdf";
+import CV from "../../assets/Shah__Rishabh_Developer_Resume.pdf";
 import Profileimage from "../../assets/RishabhProfilePicture.jpg";
 
 import Info from "./Info";
